@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx426rhj6ehcl"]
+
+[ext_resource type="Texture2D" uid="uid://rouuxmvwy23g" path="res://PeggleClone/Level_win.png" id="1_sxtul"]
+[ext_resource type="Script" uid="uid://c5csnyxe7fvht" path="res://victory_button.gd" id="2_jia4s"]
+
+[node name="level_complete" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(967, 521)
+scale = Vector2(0.25, 0.235)
+texture = ExtResource("1_sxtul")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 530.0
+offset_right = 1100.0
+offset_bottom = 589.0
+theme_override_font_sizes/font_size = 30
+text = "Continue Spirit Journey"
+script = ExtResource("2_jia4s")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

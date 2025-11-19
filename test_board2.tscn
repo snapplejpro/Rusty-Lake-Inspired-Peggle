@@ -1,0 +1,349 @@
+[gd_scene load_steps=30 format=4 uid="uid://bcbb52k4wkdlt"]
+
+[ext_resource type="Script" uid="uid://e0rnaeui43yu" path="res://test_board.gd" id="1_7wnwy"]
+[ext_resource type="PackedScene" uid="uid://bi35rtlwitmq" path="res://Ball.tscn" id="2_8f4vn"]
+[ext_resource type="PackedScene" uid="uid://4v348alhipgu" path="res://PegRed.tscn" id="3_pe0uu"]
+[ext_resource type="Script" uid="uid://bc7d3jtow1pe2" path="res://label.gd" id="4_5t6qp"]
+[ext_resource type="Texture2D" uid="uid://8avk74yob7cq" path="res://PeggleClone/squid.png" id="5_x38g8"]
+[ext_resource type="Script" uid="uid://ds6dneapddx41" path="res://squid.gd" id="6_pqh1p"]
+[ext_resource type="Texture2D" uid="uid://x5w0yba6u4qk" path="res://PeggleClone/lineText.png" id="7_4ryhe"]
+[ext_resource type="Script" uid="uid://ble5g1mwd6ujk" path="res://line_2d.gd" id="8_22prn"]
+[ext_resource type="Script" uid="uid://da5xpdb5th40x" path="res://killzone.gd" id="9_i75og"]
+[ext_resource type="Texture2D" uid="uid://bl5gwl7cgfc7c" path="res://PeggleClone/tileset.png" id="10_jaeui"]
+[ext_resource type="Script" uid="uid://c4kolwryj3r03" path="res://goal.gd" id="11_kyqyj"]
+[ext_resource type="Texture2D" uid="uid://c10s53nqn73r7" path="res://PeggleClone/samsara_animal.png" id="12_hfok2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu0v8"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiafw"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63yly"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdhpa"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14b8k"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmuf7"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5clxv"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4ctt"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywh2k"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pe4f"]
+atlas = ExtResource("5_x38g8")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tc27c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yu0v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fiafw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63yly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdhpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14b8k")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmuf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5clxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4ctt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywh2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pe4f")
+}],
+"loop": true,
+"name": &"Shoot",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdhpa"]
+size = Vector2(1758, 108)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_14b8k"]
+bounce = 0.39
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_14b8k"]
+texture = ExtResource("10_jaeui")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.63726044, 16, 0.95589066, 16, 13.701122, -16, 13.382492)
+1:0/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.63726044, 13.701122, -16, 13.382492, 13.063862, -16, 13.382492)
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.0098763, -16, 13.701122, -16, 13.382492, 13.063862, -7.0098763, 13.063862)
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5clxv"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_14b8k")
+sources/2 = SubResource("TileSetAtlasSource_14b8k")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5clxv"]
+size = Vector2(281, 18)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kmuf7"]
+font_size = 50
+
+[node name="TestBoard" type="Node2D"]
+script = ExtResource("1_7wnwy")
+
+[node name="Ball" parent="." instance=ExtResource("2_8f4vn")]
+position = Vector2(-526, 217)
+mass = 0.102
+gravity_scale = 0.689
+
+[node name="Pegs" type="Node" parent="."]
+
+[node name="Peg1" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(545, 300)
+
+[node name="Peg2" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(447, 300)
+
+[node name="Peg3" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(650, 300)
+
+[node name="Peg4" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(750, 300)
+
+[node name="Peg5" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(100, 300)
+
+[node name="Peg6" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(200, 300)
+
+[node name="Peg7" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(325, 300)
+
+[node name="Peg8" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(100, 300)
+
+[node name="Peg9" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(592, 400)
+
+[node name="Peg10" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(494, 400)
+
+[node name="Peg11" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(697, 400)
+
+[node name="Peg12" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(797, 400)
+
+[node name="Peg13" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(147, 400)
+
+[node name="Peg14" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(247, 400)
+
+[node name="Peg15" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(335, 401)
+
+[node name="Peg16" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(147, 400)
+
+[node name="Peg17" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(524, 400)
+
+[node name="Peg18" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(426, 400)
+
+[node name="Peg19" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(629, 400)
+
+[node name="Peg20" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(729, 400)
+
+[node name="Peg22" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(844, 351)
+
+[node name="Peg23" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(746, 351)
+
+[node name="Peg24" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(949, 351)
+
+[node name="Peg25" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(1049, 351)
+
+[node name="Peg26" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(499, 351)
+
+[node name="Peg27" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(624, 351)
+
+[node name="Peg28" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(891, 451)
+
+[node name="Peg29" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(793, 451)
+
+[node name="Peg30" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(996, 451)
+
+[node name="Peg31" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(1096, 451)
+
+[node name="Peg32" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(546, 451)
+
+[node name="Peg33" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(634, 452)
+
+[node name="Peg34" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(823, 451)
+
+[node name="Peg35" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(725, 451)
+
+[node name="Peg36" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(928, 451)
+
+[node name="Peg37" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(1028, 451)
+
+[node name="Peg21" parent="Pegs" instance=ExtResource("3_pe0uu")]
+position = Vector2(79, 400)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 523.0
+offset_top = 176.0
+offset_right = 563.0
+offset_bottom = 199.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_5t6qp")
+
+[node name="Squid" type="AnimatedSprite2D" parent="."]
+position = Vector2(575, 51)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_tc27c")
+animation = &"Shoot"
+autoplay = "Idle"
+script = ExtResource("6_pqh1p")
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = -1
+position = Vector2(575.9107, 40.52621)
+scale = Vector2(0.98214287, 3.6852422)
+points = PackedVector2Array(0.09094238, -19.951527, 0.091, -10, 2, 0)
+texture = ExtResource("7_4ryhe")
+texture_mode = 1
+joint_mode = 2
+script = ExtResource("8_22prn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 325)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 648
+limit_smoothed = true
+
+[node name="killzone" type="Area2D" parent="."]
+position = Vector2(562, 673)
+script = ExtResource("9_i75og")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(11, 222)
+shape = SubResource("RectangleShape2D_qdhpa")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = 5
+z_as_relative = false
+y_sort_enabled = true
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AAD9/wUAAgACAAAAAAD9/wQAAgACAAAAAAD9/wMAAgACAAAAAAD9/wIAAgACAAAAAAD9/wEAAgACAAAAAAD9/wAAAgACAAAAAAD+//7/AgAAAAAAAAD///7/AgAAAAAAAAAAAP7/AgAAAAAAAAABAP7/AgAAAAAAAAACAP7/AgAAAAAAAAADAP7/AgAAAAAAAAAEAP7/AgAAAAAAAAAFAP7/AgAAAAAAAAAGAP7/AgAAAAAAAAAHAP7/AgAAAAAAAAAIAP7/AgAAAAAAAAAJAAUAAgAAAAIAAAAJAAQAAgAAAAIAAAAJAAMAAgAAAAIAAAAJAAIAAgAAAAIAAAAJAAEAAgAAAAIAAAAJAAAAAgAAAAIAAAAJAP//AgAAAAIAAAAJAP7/AgABAAIAAAD9//7/AgABAAAAAAD9////AgACAAAAAAD//wQAAgAAAAEAAAAAAAQAAgABAAEAAAABAAQAAgACAAEAAAAFAAQAAgAAAAEAAAAGAAQAAgABAAEAAAAHAAQAAgACAAEAAAA=")
+tile_set = SubResource("TileSet_5clxv")
+occlusion_enabled = false
+rendering_quadrant_size = 32
+physics_quadrant_size = 32
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(73, 718)
+script = ExtResource("11_kyqyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(6.5, 26)
+shape = SubResource("RectangleShape2D_5clxv")
+
+[node name="ye" type="Label" parent="Area2D"]
+offset_left = 171.0
+offset_top = -219.0
+offset_right = 826.0
+offset_bottom = -150.0
+label_settings = SubResource("LabelSettings_kmuf7")
+horizontal_alignment = 1
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1029.125, 718)
+script = ExtResource("11_kyqyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(6.5, 26)
+shape = SubResource("RectangleShape2D_5clxv")
+
+[node name="ye" type="Label" parent="Area2D2"]
+offset_left = -782.125
+offset_top = -208.0
+offset_right = -127.125
+offset_bottom = -139.0
+label_settings = SubResource("LabelSettings_kmuf7")
+horizontal_alignment = 1
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(620, 341.00003)
+scale = Vector2(0.8773438, 0.82548827)
+texture = ExtResource("12_hfok2")
+
+[connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
