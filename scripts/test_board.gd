@@ -3,7 +3,7 @@ extends Node2D
 var ballspawned = false
 var impulse_strength
 var ball_count
-const ball_scene = preload("res://Ball.tscn")
+const ball_scene = preload("res://Scenes/Ball.tscn")
 @onready var squid = get_node("Squid")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

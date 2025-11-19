@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bi35rtlwitmq"]
 
 [ext_resource type="Texture2D" uid="uid://ctoldbp0pf1si" path="res://PeggleClone/Ball.png" id="1_x8fbi"]
-[ext_resource type="Script" uid="uid://dytb4hmemgmw0" path="res://ball.gd" id="2_41u45"]
+[ext_resource type="Script" uid="uid://dytb4hmemgmw0" path="res://scripts/ball.gd" id="2_41u45"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x8fbi"]
 friction = 0.55
