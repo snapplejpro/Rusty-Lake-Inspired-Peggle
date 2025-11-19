@@ -9,5 +9,5 @@ func _ready() -> void:
 	update()
 
 func update():
-	label.text = "Score: " + str(ball.count) + \
+	label.text = "Score: " + str(get_parent().count) + \
 	"\nBalls Remaining: " + str(get_parent().ball_count)

@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+var level: int
+
 var victory_scene = preload("res://Scenes/level_complete.tscn")
 func change_scene(target: String) -> void:
 	visible = true
@@ -12,10 +14,13 @@ func change_scene(target: String) -> void:
 	
 func _ready():
 	visible = false
+	level = 0
 
 func victory():
 	$AnimationPlayer.play("fade_out")
 	await $AnimationPlayer.animation_finished
-	victory_scene.instantiate()
-	add_child(victory_scene)
+	var instance = victory_scene.instantiate()
+	get_tree().get_root().add_child(instance)
+	
+	
 	

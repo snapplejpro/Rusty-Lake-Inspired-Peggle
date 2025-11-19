@@ -5,26 +5,30 @@
 
 [node name="level_complete" type="Control"]
 z_index = 1
+layout_direction = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
+pivot_offset = Vector2(-200, -100)
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(967, 521)
+position = Vector2(617, 366)
 scale = Vector2(0.25, 0.235)
 texture = ExtResource("1_sxtul")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 700.0
-offset_top = 530.0
-offset_right = 1100.0
-offset_bottom = 589.0
+offset_left = 347.0
+offset_top = 408.0
+offset_right = 747.0
+offset_bottom = 467.0
 theme_override_font_sizes/font_size = 30
 text = "Continue Spirit Journey"
 script = ExtResource("2_jia4s")
