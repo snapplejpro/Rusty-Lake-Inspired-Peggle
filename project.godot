@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Transition="*res://Scenes/transition.tscn"
+BackgroundMusic="*res://Scenes/background_music.tscn"
 
 [display]
 

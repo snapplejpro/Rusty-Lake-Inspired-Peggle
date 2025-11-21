@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=4 uid="uid://dpbjp3omcstuq"]
+
+[ext_resource type="Script" uid="uid://c4kolwryj3r03" path="res://scripts/goal.gd" id="1_hvk7o"]
+[ext_resource type="Texture2D" uid="uid://bl5gwl7cgfc7c" path="res://PeggleClone/tileset.png" id="2_4cumv"]
+[ext_resource type="AudioStream" uid="uid://bq0usmm8ixv1o" path="res://PeggleClone/Buffalo Casino Commercial (mp3cut.net).mp3" id="3_4cumv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekqm1"]
+size = Vector2(281, 18)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yioj1"]
+font_size = 50
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ad373"]
+texture = ExtResource("2_4cumv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_y8o3v"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_ad373")
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(73, 718)
+script = ExtResource("1_hvk7o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, 26)
+shape = SubResource("RectangleShape2D_ekqm1")
+
+[node name="ye" type="Label" parent="."]
+offset_left = -330.0
+offset_top = -152.0
+offset_right = 325.0
+offset_bottom = -83.0
+label_settings = SubResource("LabelSettings_yioj1")
+horizontal_alignment = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAD9/wAAAAAAAAEAAAD+/wAAAAABAAEAAAD//wAAAAABAAEAAAAAAAAAAAABAAEAAAABAAAAAAABAAEAAAACAAAAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_y8o3v")
+
+[node name="buffalo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4cumv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

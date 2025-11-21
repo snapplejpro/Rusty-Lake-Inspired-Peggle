@@ -6,11 +6,15 @@ var ball_count
 const ball_scene = preload("res://Scenes/Ball.tscn")
 static var count: int
 @onready var squid = get_node("Squid")
+var reset_done
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	count = 0
 	ball_count = 5
+	$Label.update()
 	$ColorRect.visible = false
 	$Squid.animation = "Idle"
+	reset_done = false
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("click") and !ballspawned and ball_count > 0:
@@ -35,22 +39,26 @@ func _input(event: InputEvent) -> void:
 		@warning_ignore("standalone_expression")
 		direction.x + 10
 		newi.apply_central_impulse(direction * impulse_strength)
-	if ball_count <= 0:
+	if count >= Transition.score:
+		$Label.visible = false
+		count = 0
+		Transition.level += 1
+		Transition.score += 50
+		Transition.victory()
+	if event.is_action_released("restart"):
+		reset()
+	if ball_count <= 0 and !reset_done:
 		$Squid.animation = "corrupt"
 		await $Squid.animation_finished
 		await get_tree().create_timer(1.5).timeout
 		$ColorRect.visible = true
 		await get_tree().create_timer(2.5).timeout
 		reset()
-	if count >= 150:
-		$Label.visible = false
-		ball_count = 0
-		count = 0
-		Transition.level += 1
-		Transition.victory()
-	if event.is_action_released("restart"):
-		reset()
+		reset_done = true
 func reset():
-	get_tree().call_deferred("reload_current_scene")
+	if !reset_done:
+		get_tree().change_scene_to_file("res://Scenes/test_board.tscn")
 	count = 0
+	Transition.level = 0
+	Transition.score = 150
 	$Label.update()

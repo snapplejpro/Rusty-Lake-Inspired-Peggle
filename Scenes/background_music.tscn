@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://drep5kw8ragwn"]
+
+[ext_resource type="AudioStream" uid="uid://chy3384i3fp7v" path="res://PeggleClone/GO!TEAM!.wav" id="1_pu4hd"]
+
+[node name="background_music" type="AudioStreamPlayer"]
+stream = ExtResource("1_pu4hd")
+volume_db = -3.977
+autoplay = true

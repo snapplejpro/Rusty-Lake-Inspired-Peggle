@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var level: int
+var score: int
 
 var victory_scene = preload("res://Scenes/level_complete.tscn")
 func change_scene(target: String) -> void:
@@ -15,6 +16,7 @@ func change_scene(target: String) -> void:
 func _ready():
 	visible = false
 	level = 0
+	score = 150
 
 func victory():
 	$AnimationPlayer.play("fade_out")

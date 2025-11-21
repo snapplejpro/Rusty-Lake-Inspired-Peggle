@@ -10,4 +10,5 @@ func _ready() -> void:
 
 func update():
 	label.text = "Score: " + str(get_parent().count) + \
-	"\nBalls Remaining: " + str(get_parent().ball_count)
+	"\nBalls Remaining: " + str(get_parent().ball_count) + \
+	"\nScore Needed: " + str(Transition.score)

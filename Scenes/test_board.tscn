@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://d2fd2uhqaievj"]
+[gd_scene load_steps=45 format=4 uid="uid://d2fd2uhqaievj"]
 
 [ext_resource type="Script" uid="uid://e0rnaeui43yu" path="res://scripts/test_board.gd" id="1_osc7p"]
 [ext_resource type="PackedScene" uid="uid://bi35rtlwitmq" path="res://Scenes/Ball.tscn" id="2_n5gmk"]
@@ -10,8 +10,8 @@
 [ext_resource type="Script" uid="uid://ble5g1mwd6ujk" path="res://scripts/line_2d.gd" id="8_clxfk"]
 [ext_resource type="Script" uid="uid://da5xpdb5th40x" path="res://scripts/killzone.gd" id="9_e2eaw"]
 [ext_resource type="Texture2D" uid="uid://bl5gwl7cgfc7c" path="res://PeggleClone/tileset.png" id="10_m7o2v"]
-[ext_resource type="Script" uid="uid://c4kolwryj3r03" path="res://scripts/goal.gd" id="11_xf7hd"]
 [ext_resource type="Texture2D" uid="uid://c10s53nqn73r7" path="res://PeggleClone/samsara_animal.png" id="12_7udm6"]
+[ext_resource type="PackedScene" uid="uid://dpbjp3omcstuq" path="res://Scenes/ring.tscn" id="12_osc7p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yu0v8"]
 atlas = ExtResource("5_kik7a")
@@ -251,13 +251,7 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_14b8k")
-sources/2 = SubResource("TileSetAtlasSource_14b8k")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5clxv"]
-size = Vector2(281, 18)
-
-[sub_resource type="LabelSettings" id="LabelSettings_kmuf7"]
-font_size = 50
+sources/0 = SubResource("TileSetAtlasSource_14b8k")
 
 [node name="TestBoard" type="Node2D"]
 script = ExtResource("1_osc7p")
@@ -270,115 +264,121 @@ gravity_scale = 0.689
 [node name="Pegs" type="Node" parent="."]
 
 [node name="Peg1" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(545, 300)
+position = Vector2(455, 332)
 
 [node name="Peg2" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(447, 300)
+position = Vector2(357, 332)
 
 [node name="Peg3" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(650, 300)
-
-[node name="Peg4" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(750, 300)
+position = Vector2(560, 332)
 
 [node name="Peg5" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(100, 300)
+position = Vector2(10, 332)
 
 [node name="Peg6" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(200, 300)
+position = Vector2(110, 332)
 
 [node name="Peg7" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(325, 300)
+position = Vector2(235, 332)
 
 [node name="Peg8" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(100, 300)
+position = Vector2(10, 332)
 
 [node name="Peg9" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(592, 400)
+position = Vector2(905, 332)
 
 [node name="Peg10" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(494, 400)
+position = Vector2(807, 332)
 
 [node name="Peg11" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(697, 400)
+position = Vector2(1010, 332)
 
 [node name="Peg12" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(797, 400)
-
-[node name="Peg13" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(147, 400)
+position = Vector2(1110, 332)
 
 [node name="Peg14" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(247, 400)
+position = Vector2(560, 332)
 
 [node name="Peg15" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(335, 401)
+position = Vector2(685, 332)
+
+[node name="Peg4" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(513, 458)
+
+[node name="Peg13" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(415, 458)
 
 [node name="Peg16" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(147, 400)
+position = Vector2(618, 458)
 
 [node name="Peg17" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(524, 400)
+position = Vector2(68, 458)
 
 [node name="Peg18" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(426, 400)
+position = Vector2(168, 458)
 
 [node name="Peg19" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(629, 400)
+position = Vector2(293, 458)
 
 [node name="Peg20" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(729, 400)
-
-[node name="Peg22" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(844, 351)
-
-[node name="Peg23" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(746, 351)
-
-[node name="Peg24" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(949, 351)
-
-[node name="Peg25" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(1049, 351)
-
-[node name="Peg26" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(499, 351)
-
-[node name="Peg27" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(624, 351)
-
-[node name="Peg28" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(891, 451)
-
-[node name="Peg29" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(793, 451)
-
-[node name="Peg30" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(996, 451)
-
-[node name="Peg31" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(1096, 451)
-
-[node name="Peg32" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(546, 451)
-
-[node name="Peg33" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(634, 452)
-
-[node name="Peg34" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(823, 451)
-
-[node name="Peg35" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(725, 451)
-
-[node name="Peg36" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(928, 451)
-
-[node name="Peg37" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(1028, 451)
+position = Vector2(68, 458)
 
 [node name="Peg21" parent="Pegs" instance=ExtResource("3_abwtj")]
-position = Vector2(79, 400)
+position = Vector2(963, 458)
+
+[node name="Peg22" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(865, 458)
+
+[node name="Peg23" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(1068, 458)
+
+[node name="Peg24" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(1168, 458)
+
+[node name="Peg25" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(618, 458)
+
+[node name="Peg26" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(743, 458)
+
+[node name="Peg27" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(436, 582)
+
+[node name="Peg28" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(338, 582)
+
+[node name="Peg29" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(541, 582)
+
+[node name="Peg30" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(-9, 582)
+
+[node name="Peg31" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(91, 582)
+
+[node name="Peg32" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(216, 582)
+
+[node name="Peg33" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(-9, 582)
+
+[node name="Peg34" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(886, 582)
+
+[node name="Peg35" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(788, 582)
+
+[node name="Peg36" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(991, 582)
+
+[node name="Peg37" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(1091, 582)
+
+[node name="Peg38" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(541, 582)
+
+[node name="Peg39" parent="Pegs" instance=ExtResource("3_abwtj")]
+position = Vector2(666, 582)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 523.0
@@ -393,10 +393,8 @@ script = ExtResource("4_huwy3")
 position = Vector2(575, 51)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tc27c")
-animation = &"corrupt"
+animation = &"Idle"
 autoplay = "Idle"
-frame = 16
-frame_progress = 1.0
 script = ExtResource("6_vewwq")
 
 [node name="Line2D" type="Line2D" parent="."]
@@ -430,43 +428,11 @@ z_index = 5
 z_as_relative = false
 y_sort_enabled = true
 scale = Vector2(5, 5)
-tile_map_data = PackedByteArray("AAD9/wUAAgACAAAAAAD9/wQAAgACAAAAAAD9/wMAAgACAAAAAAD9/wIAAgACAAAAAAD9/wEAAgACAAAAAAD9/wAAAgACAAAAAAD+//7/AgAAAAAAAAD///7/AgAAAAAAAAAAAP7/AgAAAAAAAAABAP7/AgAAAAAAAAACAP7/AgAAAAAAAAADAP7/AgAAAAAAAAAEAP7/AgAAAAAAAAAFAP7/AgAAAAAAAAAGAP7/AgAAAAAAAAAHAP7/AgAAAAAAAAAIAP7/AgAAAAAAAAAJAAUAAgAAAAIAAAAJAAQAAgAAAAIAAAAJAAMAAgAAAAIAAAAJAAIAAgAAAAIAAAAJAAEAAgAAAAIAAAAJAAAAAgAAAAIAAAAJAP//AgAAAAIAAAAJAP7/AgABAAIAAAD9//7/AgABAAAAAAD9////AgACAAAAAAD//wQAAgAAAAEAAAAAAAQAAgABAAEAAAABAAQAAgACAAEAAAAFAAQAAgAAAAEAAAAGAAQAAgABAAEAAAAHAAQAAgACAAEAAAA=")
+tile_map_data = PackedByteArray("AAD9/wQAAAACAAAAAAD9/wMAAAACAAAAAAD9/wIAAAACAAAAAAD9/wEAAAACAAAAAAD9/wAAAAACAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAAUAAAAAAAIAAAAJAAQAAAAAAAIAAAAJAAMAAAAAAAIAAAAJAAIAAAAAAAIAAAAJAAEAAAAAAAIAAAAJAAAAAAAAAAIAAAAJAP//AAAAAAIAAAAJAP7/AAABAAIAAAD9//7/AAABAAAAAAD9////AAACAAAAAAD9/wUAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_5clxv")
 occlusion_enabled = false
 rendering_quadrant_size = 32
 physics_quadrant_size = 32
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(73, 718)
-script = ExtResource("11_xf7hd")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(6.5, 26)
-shape = SubResource("RectangleShape2D_5clxv")
-
-[node name="ye" type="Label" parent="Area2D"]
-offset_left = 171.0
-offset_top = -219.0
-offset_right = 826.0
-offset_bottom = -150.0
-label_settings = SubResource("LabelSettings_kmuf7")
-horizontal_alignment = 1
-
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(1029.125, 718)
-script = ExtResource("11_xf7hd")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(6.5, 26)
-shape = SubResource("RectangleShape2D_5clxv")
-
-[node name="ye" type="Label" parent="Area2D2"]
-offset_left = -782.125
-offset_top = -208.0
-offset_right = -127.125
-offset_bottom = -139.0
-label_settings = SubResource("LabelSettings_kmuf7")
-horizontal_alignment = 1
 
 [node name="background" type="Sprite2D" parent="."]
 z_index = -3
@@ -488,6 +454,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Area2D3" parent="." instance=ExtResource("12_osc7p")]
+
+[node name="Area2D" parent="." instance=ExtResource("12_osc7p")]
+position = Vector2(994, 716)
+
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
