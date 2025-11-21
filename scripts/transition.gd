@@ -17,6 +17,14 @@ func _ready():
 	visible = false
 	level = 0
 	score = 150
+	
+func play():
+	visible = true
+	$AnimationPlayer.play("fade_out")
+	await $AnimationPlayer.animation_finished
+	$AnimationPlayer.play("fade_in")
+	await $AnimationPlayer.animation_finished
+	visible = false
 
 func victory():
 	$AnimationPlayer.play("fade_out")
