@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://tk4pq342ws8c"]
+
+[ext_resource type="Texture2D" uid="uid://b85s7lqyartr2" path="res://PeggleClone/home_menu.png" id="1_28flt"]
+[ext_resource type="FontFile" uid="uid://c5jutyq3eyb5w" path="res://PeggleClone/boldpixels/BoldPixels.ttf" id="2_48xlc"]
+[ext_resource type="Script" uid="uid://cp1ya75d0y63k" path="res://Scenes/start.gd" id="3_1ehe0"]
+[ext_resource type="AudioStream" uid="uid://cpehcx4knsom2" path="res://PeggleClone/SOUL!JOURNEY!COMPLETE.wav" id="4_ce3w2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(18, 3)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_28flt")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -221.0
+offset_top = -1.0
+offset_right = 229.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 65
+text = "Start"
+script = ExtResource("3_1ehe0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ce3w2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

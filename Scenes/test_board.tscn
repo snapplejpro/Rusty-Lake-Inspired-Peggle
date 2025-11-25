@@ -1,9 +1,10 @@
-[gd_scene load_steps=45 format=4 uid="uid://d2fd2uhqaievj"]
+[gd_scene load_steps=46 format=4 uid="uid://d2fd2uhqaievj"]
 
 [ext_resource type="Script" uid="uid://e0rnaeui43yu" path="res://scripts/test_board.gd" id="1_osc7p"]
 [ext_resource type="PackedScene" uid="uid://bi35rtlwitmq" path="res://Scenes/Ball.tscn" id="2_n5gmk"]
 [ext_resource type="PackedScene" uid="uid://4v348alhipgu" path="res://Scenes/PegRed.tscn" id="3_abwtj"]
 [ext_resource type="Script" uid="uid://bc7d3jtow1pe2" path="res://scripts/label.gd" id="4_huwy3"]
+[ext_resource type="FontFile" uid="uid://c5jutyq3eyb5w" path="res://PeggleClone/boldpixels/BoldPixels.ttf" id="4_n5gmk"]
 [ext_resource type="Texture2D" uid="uid://8avk74yob7cq" path="res://PeggleClone/squid.png" id="5_kik7a"]
 [ext_resource type="Script" uid="uid://ds6dneapddx41" path="res://scripts/squid.gd" id="6_vewwq"]
 [ext_resource type="Texture2D" uid="uid://x5w0yba6u4qk" path="res://PeggleClone/lineText.png" id="7_gfmar"]
@@ -381,10 +382,12 @@ position = Vector2(541, 582)
 position = Vector2(666, 582)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 523.0
+offset_left = 500.0
 offset_top = 176.0
-offset_right = 563.0
-offset_bottom = 199.0
+offset_right = 501.0
+offset_bottom = 202.0
+theme_override_fonts/font = ExtResource("4_n5gmk")
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("4_huwy3")

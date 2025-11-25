@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PeggleClone"
-run/main_scene="uid://d2fd2uhqaievj"
+run/main_scene="uid://tk4pq342ws8c"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0.068798296, 0.06879827, 0.068798244, 1)
 boot_splash/fullsize=false
@@ -26,9 +26,13 @@ BackgroundMusic="*res://Scenes/background_music.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
-window/size/initial_position_type=0
+window/size/resizable=false
+window/size/borderless=true
 window/stretch/mode="viewport"
+
+[gui]
+
+theme/custom_font="uid://c5jutyq3eyb5w"
 
 [input]
 
