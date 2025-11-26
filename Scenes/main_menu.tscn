@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b85s7lqyartr2" path="res://PeggleClone/home_menu.png" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://c5jutyq3eyb5w" path="res://PeggleClone/boldpixels/BoldPixels.ttf" id="2_48xlc"]
-[ext_resource type="Script" uid="uid://cp1ya75d0y63k" path="res://Scenes/start.gd" id="3_1ehe0"]
+[ext_resource type="Script" uid="uid://cp1ya75d0y63k" path="res://scripts/start.gd" id="3_1ehe0"]
 [ext_resource type="AudioStream" uid="uid://cpehcx4knsom2" path="res://PeggleClone/SOUL!JOURNEY!COMPLETE.wav" id="4_ce3w2"]
 
 [node name="Control" type="Control"]

@@ -1,7 +1,7 @@
 extends Button
 
 var list_of_scenes = ["res://Scenes/test_board.tscn", "res://Scenes/test_board2.tscn","res://Scenes/test_board3.tscn",
-"res://Scenes/test_board4.tscn"]
+"res://Scenes/test_board4.tscn", "res://Scenes/test_board5.tscn"]
 
 func _ready():
 	$"../AudioStreamPlayer2D".play()

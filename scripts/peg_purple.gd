@@ -1,0 +1,25 @@
+extends Area2D
+
+var ball
+var blue_ref = preload("res://Scenes/peg_blue.tscn")
+
+func _on_body_exited(_body: Node2D) -> void:
+	$"../AudioStreamPlayer2D".pitch_scale = randf_range(1.0, 1.1)
+	$"../AudioStreamPlayer2D".play()
+	ball = get_tree().get_root().get_node("TestBoard/Ball")
+	ball.get_parent().count += 10
+	var tweem = create_tween()
+	tweem.tween_property(get_parent(),"modulate", Color(modulate.r, modulate.g, modulate.b, 0.0), 0.3)
+	await tweem.finished
+	ball.hit()
+	var one = blue_ref.instantiate()
+	get_tree().get_root().get_node("TestBoard/Pegs").add_child(one)
+
+	var two = blue_ref.instantiate()
+	get_tree().get_root().get_node("TestBoard/Pegs").add_child(two)
+	one.global_position = self.global_position
+	two.global_position = self.global_position
+	one.global_position += Vector2(randi_range(1,100), randi_range(1,100))
+	two.global_position -= Vector2(-randi_range(1,100), -randi_range(1,100))
+
+	get_parent().queue_free()
