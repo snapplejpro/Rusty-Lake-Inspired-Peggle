@@ -16,7 +16,7 @@ func change_scene(target: String) -> void:
 func _ready():
 	visible = false
 	level = 0
-	score = 250
+	score = 150
 	
 func play():
 	visible = true
