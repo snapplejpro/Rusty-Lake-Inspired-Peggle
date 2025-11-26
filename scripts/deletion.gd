@@ -9,4 +9,5 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	global_position.y -= 1
 	if(global_position.y < -155):
+		await get_tree().create_timer(2.5).timeout
 		get_tree().quit()

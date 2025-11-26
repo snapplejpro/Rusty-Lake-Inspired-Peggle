@@ -1,6 +1,6 @@
-[gd_scene load_steps=47 format=4 uid="uid://8c8n8atgxk41"]
+[gd_scene load_steps=48 format=4 uid="uid://8c8n8atgxk41"]
 
-[ext_resource type="Script" uid="uid://crxxfiyjqbubs" path="res://scripts/test_board_finale.gd" id="1_11wyq"]
+[ext_resource type="Script" uid="uid://bhr2qoktnchuk" path="res://Scenes/test_board_6.gd" id="1_11wyq"]
 [ext_resource type="PackedScene" uid="uid://bi35rtlwitmq" path="res://Scenes/Ball.tscn" id="2_11wyq"]
 [ext_resource type="PackedScene" uid="uid://8c0yir2475no" path="res://Scenes/peg_purple.tscn" id="3_v88vq"]
 [ext_resource type="FontFile" uid="uid://c5jutyq3eyb5w" path="res://PeggleClone/boldpixels/BoldPixels.ttf" id="4_gc3rg"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bl5gwl7cgfc7c" path="res://PeggleClone/tileset.png" id="11_33jp3"]
 [ext_resource type="Texture2D" uid="uid://2anh62oxsoab" path="res://PeggleClone/samsara_deva.png" id="11_dsg61"]
 [ext_resource type="PackedScene" uid="uid://dpbjp3omcstuq" path="res://Scenes/ring.tscn" id="13_tt5xf"]
+[ext_resource type="PackedScene" uid="uid://4v348alhipgu" path="res://Scenes/PegRed.tscn" id="15_v88vq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yu0v8"]
 atlas = ExtResource("6_8p4be")
@@ -364,10 +365,22 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Area2D3" parent="." instance=ExtResource("13_tt5xf")]
-position = Vector2(552, 727)
-scale = Vector2(5, 5)
+position = Vector2(554, 759)
+scale = Vector2(4, 1)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_v88vq")]
 position = Vector2(360, 229)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("15_v88vq")]
+position = Vector2(266, 667)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("15_v88vq")]
+position = Vector2(917, 674)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("3_v88vq")]
+position = Vector2(110, 524)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("3_v88vq")]
+position = Vector2(1068, 518)
 
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
