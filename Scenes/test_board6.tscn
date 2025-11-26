@@ -1,125 +1,126 @@
-[gd_scene load_steps=46 format=4 uid="uid://c8tugrnps7wjg"]
+[gd_scene load_steps=47 format=4 uid="uid://8c8n8atgxk41"]
 
-[ext_resource type="Script" uid="uid://e0rnaeui43yu" path="res://scripts/test_board.gd" id="1_n4g4p"]
-[ext_resource type="PackedScene" uid="uid://bi35rtlwitmq" path="res://Scenes/Ball.tscn" id="2_abqs3"]
-[ext_resource type="PackedScene" uid="uid://8c0yir2475no" path="res://Scenes/peg_purple.tscn" id="3_ub3t3"]
-[ext_resource type="FontFile" uid="uid://c5jutyq3eyb5w" path="res://PeggleClone/boldpixels/BoldPixels.ttf" id="6_kilf8"]
-[ext_resource type="Script" uid="uid://bc7d3jtow1pe2" path="res://scripts/label.gd" id="7_t3632"]
-[ext_resource type="Texture2D" uid="uid://8avk74yob7cq" path="res://PeggleClone/squid.png" id="8_opkco"]
-[ext_resource type="Script" uid="uid://ds6dneapddx41" path="res://scripts/squid.gd" id="9_ep0gh"]
-[ext_resource type="Texture2D" uid="uid://x5w0yba6u4qk" path="res://PeggleClone/lineText.png" id="10_51g7a"]
-[ext_resource type="Script" uid="uid://ble5g1mwd6ujk" path="res://scripts/line_2d.gd" id="11_dkx2s"]
-[ext_resource type="Texture2D" uid="uid://dmnwt7dv0j0ma" path="res://PeggleClone/samsara_naraka.png" id="11_eh586"]
-[ext_resource type="Script" uid="uid://da5xpdb5th40x" path="res://scripts/killzone.gd" id="12_eo8ws"]
-[ext_resource type="PackedScene" uid="uid://dpbjp3omcstuq" path="res://Scenes/ring.tscn" id="13_2cq45"]
-[ext_resource type="Texture2D" uid="uid://bl5gwl7cgfc7c" path="res://PeggleClone/tileset.png" id="13_swwur"]
+[ext_resource type="Script" uid="uid://crxxfiyjqbubs" path="res://scripts/test_board_finale.gd" id="1_11wyq"]
+[ext_resource type="PackedScene" uid="uid://bi35rtlwitmq" path="res://Scenes/Ball.tscn" id="2_11wyq"]
+[ext_resource type="PackedScene" uid="uid://8c0yir2475no" path="res://Scenes/peg_purple.tscn" id="3_v88vq"]
+[ext_resource type="FontFile" uid="uid://c5jutyq3eyb5w" path="res://PeggleClone/boldpixels/BoldPixels.ttf" id="4_gc3rg"]
+[ext_resource type="PackedScene" uid="uid://qpbjxfffpkyq" path="res://Scenes/peg_blue.tscn" id="4_wgmd2"]
+[ext_resource type="Script" uid="uid://bc7d3jtow1pe2" path="res://scripts/label.gd" id="5_wgmd2"]
+[ext_resource type="Texture2D" uid="uid://8avk74yob7cq" path="res://PeggleClone/squid.png" id="6_8p4be"]
+[ext_resource type="Script" uid="uid://ds6dneapddx41" path="res://scripts/squid.gd" id="7_mjha5"]
+[ext_resource type="Texture2D" uid="uid://x5w0yba6u4qk" path="res://PeggleClone/lineText.png" id="8_l0drc"]
+[ext_resource type="Script" uid="uid://ble5g1mwd6ujk" path="res://scripts/line_2d.gd" id="9_ir0cf"]
+[ext_resource type="Script" uid="uid://da5xpdb5th40x" path="res://scripts/killzone.gd" id="10_iom78"]
+[ext_resource type="Texture2D" uid="uid://bl5gwl7cgfc7c" path="res://PeggleClone/tileset.png" id="11_33jp3"]
+[ext_resource type="Texture2D" uid="uid://2anh62oxsoab" path="res://PeggleClone/samsara_deva.png" id="11_dsg61"]
+[ext_resource type="PackedScene" uid="uid://dpbjp3omcstuq" path="res://Scenes/ring.tscn" id="13_tt5xf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yu0v8"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fiafw"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_63yly"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qdhpa"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_14b8k"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmuf7"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5clxv"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(384, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b4ctt"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ywh2k"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(512, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2pe4f"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_osc7p"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1216, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n5gmk"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1280, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abwtj"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1344, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_huwy3"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1408, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kik7a"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1472, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vewwq"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1536, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfmar"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1600, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_clxfk"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1664, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2eaw"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1728, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m7o2v"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1792, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xf7hd"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1856, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7udm6"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1920, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nxw2"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(1984, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0mq5s"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(2048, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_js3qw"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(2112, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xuxaf"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(2176, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_702nx"]
-atlas = ExtResource("8_opkco")
+atlas = ExtResource("6_8p4be")
 region = Rect2(2240, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tc27c"]
@@ -228,9 +229,8 @@ size = Vector2(1776, 108)
 bounce = 0.39
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_14b8k"]
-texture = ExtResource("13_swwur")
+texture = ExtResource("11_33jp3")
 texture_region_size = Vector2i(32, 32)
-use_texture_padding = false
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.63726044, 16, 0.95589066, 16, 13.701122, -16, 13.382492)
 1:0/0 = 0
@@ -256,90 +256,67 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_14b8k")
 sources/0 = SubResource("TileSetAtlasSource_14b8k")
 
 [node name="TestBoard" type="Node2D"]
-script = ExtResource("1_n4g4p")
+script = ExtResource("1_11wyq")
 
-[node name="Ball" parent="." instance=ExtResource("2_abqs3")]
+[node name="Ball" parent="." instance=ExtResource("2_11wyq")]
 position = Vector2(-526, 217)
 mass = 0.102
 gravity_scale = 0.689
 
 [node name="Pegs" type="Node" parent="."]
 
-[node name="StaticBody2D8" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(651, -31)
+[node name="StaticBody2D" parent="Pegs" instance=ExtResource("3_v88vq")]
+position = Vector2(358, 425)
 
-[node name="StaticBody2D9" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(623, 156)
+[node name="StaticBody2D2" parent="Pegs" instance=ExtResource("3_v88vq")]
+position = Vector2(823, 416)
 
-[node name="StaticBody2D10" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(-10, 643)
+[node name="StaticBody2D3" parent="Pegs" instance=ExtResource("4_wgmd2")]
+position = Vector2(591, 510)
 
-[node name="StaticBody2D11" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(112, 584)
+[node name="StaticBody2D4" parent="Pegs" instance=ExtResource("4_wgmd2")]
+position = Vector2(591, 571)
 
-[node name="StaticBody2D12" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(179, 737)
+[node name="StaticBody2D5" parent="Pegs" instance=ExtResource("4_wgmd2")]
+position = Vector2(589, 635)
 
-[node name="StaticBody2D13" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(21, 791)
+[node name="StaticBody2D6" parent="Pegs" instance=ExtResource("4_wgmd2")]
+position = Vector2(589, 694)
 
-[node name="StaticBody2D14" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(256, 677)
-
-[node name="StaticBody2D15" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(197, 553)
-
-[node name="StaticBody2D16" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(825, 599)
-
-[node name="StaticBody2D17" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(947, 685)
-
-[node name="StaticBody2D18" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(739, 721)
-
-[node name="StaticBody2D19" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(866, 791)
-
-[node name="StaticBody2D20" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(996, 703)
-
-[node name="StaticBody2D21" parent="Pegs" instance=ExtResource("3_ub3t3")]
-position = Vector2(936, 812)
+[node name="StaticBody2D7" parent="Pegs" instance=ExtResource("3_v88vq")]
+position = Vector2(820, 220)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 500.0
 offset_top = 176.0
-offset_right = 540.0
+offset_right = 501.0
 offset_bottom = 202.0
-theme_override_fonts/font = ExtResource("6_kilf8")
+theme_override_fonts/font = ExtResource("4_gc3rg")
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("7_t3632")
+script = ExtResource("5_wgmd2")
 
 [node name="Squid" type="AnimatedSprite2D" parent="."]
 position = Vector2(575, 51)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_tc27c")
-animation = &"corrupt"
+animation = &"Idle"
 autoplay = "Idle"
-frame = 16
-frame_progress = 1.0
-script = ExtResource("9_ep0gh")
+script = ExtResource("7_mjha5")
 
 [node name="Line2D" type="Line2D" parent="."]
 z_index = -1
 position = Vector2(575.9107, 40.52621)
 scale = Vector2(0.98214287, 3.6852422)
 points = PackedVector2Array(0.09094238, -19.951527, 0.091, -10, 2, 0)
-texture = ExtResource("10_51g7a")
+texture = ExtResource("8_l0drc")
 texture_mode = 1
 joint_mode = 2
-script = ExtResource("11_dkx2s")
+script = ExtResource("9_ir0cf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(580, 329.51)
+position = Vector2(580, 325)
 limit_left = 0
 limit_top = 0
 limit_right = 1150
@@ -348,7 +325,7 @@ limit_smoothed = true
 
 [node name="killzone" type="Area2D" parent="."]
 position = Vector2(562, 673)
-script = ExtResource("12_eo8ws")
+script = ExtResource("10_iom78")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 position = Vector2(14, 222)
@@ -359,7 +336,7 @@ z_index = 5
 z_as_relative = false
 y_sort_enabled = true
 scale = Vector2(5, 5)
-tile_map_data = PackedByteArray("AAD9/wUAAAACAAAAAAD9/wQAAAACAAAAAAD9/wMAAAACAAAAAAD9/wIAAAACAAAAAAD9/wEAAAACAAAAAAD9/wAAAAACAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAAUAAAAAAAIAAAAJAAQAAAAAAAIAAAAJAAMAAAAAAAIAAAAJAAIAAAAAAAIAAAAJAAEAAAAAAAIAAAAJAAAAAAAAAAIAAAAJAP//AAAAAAIAAAAJAP7/AAABAAIAAAD9//7/AAABAAAAAAD9////AAACAAAAAAA=")
+tile_map_data = PackedByteArray("AAD9/wQAAAACAAAAAAD9/wMAAAACAAAAAAD9/wIAAAACAAAAAAD9/wEAAAACAAAAAAD9/wAAAAACAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAAUAAAAAAAIAAAAJAAQAAAAAAAIAAAAJAAMAAAAAAAIAAAAJAAIAAAAAAAIAAAAJAAEAAAAAAAIAAAAJAAAAAAAAAAIAAAAJAP//AAAAAAIAAAAJAP7/AAABAAIAAAD9//7/AAABAAAAAAD9////AAACAAAAAAD9/wUAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_5clxv")
 occlusion_enabled = false
 rendering_quadrant_size = 32
@@ -367,9 +344,9 @@ physics_quadrant_size = 32
 
 [node name="background" type="Sprite2D" parent="."]
 z_index = -3
-position = Vector2(547, 356)
+position = Vector2(620, 341.00003)
 scale = Vector2(0.8773438, 0.82548827)
-texture = ExtResource("11_eh586")
+texture = ExtResource("11_dsg61")
 metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -386,7 +363,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Area2D" parent="." instance=ExtResource("13_2cq45")]
-position = Vector2(509, 760)
+[node name="Area2D3" parent="." instance=ExtResource("13_tt5xf")]
+position = Vector2(552, 727)
+scale = Vector2(5, 5)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_v88vq")]
+position = Vector2(360, 229)
 
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]

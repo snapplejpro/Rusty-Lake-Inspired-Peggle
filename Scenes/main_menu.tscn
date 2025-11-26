@@ -36,4 +36,21 @@ script = ExtResource("3_1ehe0")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ce3w2")
 
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = -581.0
+offset_top = 83.0
+offset_right = 592.0
+offset_bottom = 296.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 50
+text = "Escape to exit
+R to reset"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

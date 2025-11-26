@@ -1,0 +1,261 @@
+[gd_scene load_steps=15 format=4 uid="uid://bvbsqaoc2dtet"]
+
+[ext_resource type="Script" uid="uid://crxxfiyjqbubs" path="res://scripts/test_board_finale.gd" id="1_80ii4"]
+[ext_resource type="PackedScene" uid="uid://bi35rtlwitmq" path="res://Scenes/Ball.tscn" id="2_uklem"]
+[ext_resource type="Script" uid="uid://b8wtsb8icxwnc" path="res://scripts/credit.gd" id="4_1jjbe"]
+[ext_resource type="FontFile" uid="uid://c5jutyq3eyb5w" path="res://PeggleClone/boldpixels/BoldPixels.ttf" id="5_shx05"]
+[ext_resource type="AudioStream" uid="uid://cpehcx4knsom2" path="res://PeggleClone/SOUL!JOURNEY!COMPLETE.wav" id="6_b5ufn"]
+[ext_resource type="Texture2D" uid="uid://fp861mx4n720" path="res://PeggleClone/gallaryShot-export.png" id="7_1jjbe"]
+[ext_resource type="Texture2D" uid="uid://biiiqiocfucmv" path="res://PeggleClone/mQPBsM.png" id="8_kjunr"]
+[ext_resource type="Script" uid="uid://dxm0nel75kois" path="res://scripts/deletion.gd" id="8_vkwml"]
+[ext_resource type="Texture2D" uid="uid://dwc5443u4c67a" path="res://PeggleClone/channels4_profile.jpg" id="9_hfyxj"]
+[ext_resource type="Script" uid="uid://bwo2c8tqgff4s" path="res://scripts/credit2.gd" id="9_vkwml"]
+[ext_resource type="Texture2D" uid="uid://bl5gwl7cgfc7c" path="res://PeggleClone/tileset.png" id="12_mkdu8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_14b8k"]
+bounce = 0.39
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_14b8k"]
+texture = ExtResource("12_mkdu8")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.63726044, 16, 0.95589066, 16, 13.701122, -16, 13.382492)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.965767, -16, 16, -16, 16, 16, -7.965767, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.965767, -16, 16, -16, 16, 16, -7.965767, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_5clxv"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_14b8k")
+sources/0 = SubResource("TileSetAtlasSource_14b8k")
+
+[node name="TestBoard" type="Node2D"]
+script = ExtResource("1_80ii4")
+
+[node name="Ball" parent="." instance=ExtResource("2_uklem")]
+position = Vector2(-526, 217)
+mass = 0.102
+gravity_scale = 0.689
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 325)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 648
+limit_smoothed = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = 5
+z_as_relative = false
+y_sort_enabled = true
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AAD9/wQAAAACAAAAAAD9/wMAAAACAAAAAAD9/wIAAAACAAAAAAD9/wEAAAACAAAAAAD9/wAAAAACAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAAUAAAAAAAIAAAAJAAQAAAAAAAIAAAAJAAMAAAAAAAIAAAAJAAIAAAAAAAIAAAAJAAEAAAAAAAIAAAAJAAAAAAAAAAIAAAAJAP//AAAAAAIAAAAJAP7/AAABAAIAAAD9//7/AAABAAAAAAD9////AAACAAAAAAD9/wUAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_5clxv")
+occlusion_enabled = false
+rendering_quadrant_size = 32
+physics_quadrant_size = 32
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -605.0
+offset_top = -254.0
+offset_right = 1795.0
+offset_bottom = 981.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(671, 381.00003)
+scale = Vector2(2.5, 2.353)
+texture = ExtResource("7_1jjbe")
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_b5ufn")
+
+[node name="credits" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="credits"]
+offset_left = 347.0
+offset_top = 793.0
+offset_right = 854.0
+offset_bottom = 844.0
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "Thank You For Playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1jjbe")
+
+[node name="Label2" type="Label" parent="credits"]
+offset_left = 100.0
+offset_top = 891.0
+offset_right = 1129.0
+offset_bottom = 1104.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "Enjoy this teaser for my first major project 
+(This was a short activity)
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1jjbe")
+
+[node name="Label3" type="Label" parent="credits"]
+offset_left = -251.0
+offset_top = 1311.0
+offset_right = 778.0
+offset_bottom = 1524.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "Youtube:
+snapplejpro"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1jjbe")
+
+[node name="Label4" type="Label" parent="credits"]
+offset_left = 522.0
+offset_top = 1633.0
+offset_right = 1551.0
+offset_bottom = 1846.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "X:
+snapplejpro"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1jjbe")
+
+[node name="Label5" type="Label" parent="credits"]
+offset_left = 21.0
+offset_top = 2077.0
+offset_right = 1050.0
+offset_bottom = 2290.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "and so on.."
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1jjbe")
+
+[node name="Label6" type="Label" parent="credits"]
+offset_left = 16.0
+offset_top = 2451.0
+offset_right = 1045.0
+offset_bottom = 2664.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "Thanks to Rusty Lake Studios for the amazing series
+(https://www.rustylake.com/)
+Happy 10th Anniversary!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1jjbe")
+
+[node name="Label7" type="Label" parent="credits"]
+offset_left = -2.0
+offset_top = 3673.0
+offset_right = 1171.0
+offset_bottom = 3886.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "Thank you to Flaw Peacock, for introducing
+me to this series and so many more..
+Love the videos :)
+https://www.youtube.com/@flawedpeacock"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1jjbe")
+
+[node name="Label8" type="Label" parent="credits"]
+offset_left = 7.0
+offset_top = 3898.0
+offset_right = 1180.0
+offset_bottom = 4111.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "You know he was actually in this game a
+couple times as easter eggs!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1jjbe")
+
+[node name="Label9" type="Label" parent="credits"]
+offset_left = -2.0
+offset_top = 4325.0
+offset_right = 1171.0
+offset_bottom = 4538.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_shx05")
+theme_override_font_sizes/font_size = 50
+text = "Look forward to Averdale!
+My first major project, inspired by who's lila
+among other things."
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_vkwml")
+
+[node name="Sprite2D" type="Sprite2D" parent="credits"]
+position = Vector2(590, 2797)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_kjunr")
+script = ExtResource("9_vkwml")
+
+[node name="Sprite2D2" type="Sprite2D" parent="credits"]
+position = Vector2(585, 3432)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_hfyxj")
+script = ExtResource("9_vkwml")

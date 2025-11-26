@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5cjm623r4amu"]
+
+[ext_resource type="Texture2D" uid="uid://0rywt7mcog1" path="res://PeggleClone/golden cube.png" id="1_c011v"]
+[ext_resource type="Script" uid="uid://biul1ig0oc0mf" path="res://scripts/victory_button2.gd" id="2_c011v"]
+[ext_resource type="AudioStream" uid="uid://pw45xbo2ebfd" path="res://PeggleClone/cube_spawn.wav" id="3_l6k6y"]
+
+[node name="level_complete" type="Control"]
+z_index = 1
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-200, -100)
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(584, 410)
+scale = Vector2(1.1, 1.078)
+texture = ExtResource("1_c011v")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 408.0
+offset_right = 747.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 30
+text = "Continue Spirit Journey"
+script = ExtResource("2_c011v")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_l6k6y")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

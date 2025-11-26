@@ -7,6 +7,8 @@ const ball_scene = preload("res://Scenes/Ball.tscn")
 static var count: int
 @onready var squid = get_node("Squid")
 var reset_done
+const HOLD_TIME := 2.0  # seconds required to quit
+var hold_timer := 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	BackgroundMusic.stream_paused = false
@@ -16,6 +18,7 @@ func _ready() -> void:
 	$ColorRect.visible = false
 	$Squid.animation = "Idle"
 	reset_done = false
+
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("click") and !ballspawned and ball_count > 0:
